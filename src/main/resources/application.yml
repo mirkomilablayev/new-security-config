@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: spring-security
+  datasource:
+    url: jdbc:postgresql://localhost:5433/security_test
+    password: root123
+    username: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.PostgreSQL81Dialect
+    properties:
+      enable_lazy_load_no_trans: true
+
+  data:
+    jpa:
+      repositories:
+        enabled: true
